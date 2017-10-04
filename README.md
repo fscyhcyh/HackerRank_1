@@ -26,6 +26,10 @@ PQRS 4
 Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
 
 The website about [REGEXP_LIKE](https://www.techonthenet.com/oracle/regexp_like.php)
+OR 
+```
+WHERE REGEXP_LIKE (MTD_ITEM_NUMBER,'^(31A-2M5E|31AS2T5F|31A-32AD|31AS62N2|31BM63P3|31AM66Q4|31AH64Q4|31AH55R5|31AM7BR3|31AH54Q6|31AH55Q8)(*)')
+```
 
 MY ANSWER
 ```
