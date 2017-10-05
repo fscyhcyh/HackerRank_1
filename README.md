@@ -46,7 +46,7 @@ or
 ```
 regexp_like(lower(city),'^[aeiou]') 
 ```
-or
+**or**
 ```
 regexp_like(city,'^[aeiou]','i') 
 ```
