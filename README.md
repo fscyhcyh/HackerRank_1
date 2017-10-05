@@ -44,5 +44,5 @@ regexp_like(lower(city),'^[aeiou](*)')
 ```
 or
 ```
-or  regexp_like(lower(city),'^[aeiou]') 
+regexp_like(lower(city),'^[aeiou]') 
 ```
