@@ -46,3 +46,19 @@ or
 ```
 regexp_like(lower(city),'^[aeiou]') 
 ```
+
+### Weather Observation Station 7 --- similar to 6
+Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
+
+My answer:
+```
+select distinct city 
+from station
+where regexp_like (lower(city), '(*)[aeiou]$');
+```
+or
+```
+select distinct city 
+from station
+where regexp_like (lower(city), '[aeiou]$');
+```
