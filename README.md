@@ -113,3 +113,6 @@ from students
 where marks > 75
 order by substr(name,-3,3) , id asc ;
 ```
+**Pay attention to order by**
+**[The sequence of the sql clause](http://www.jellythink.com/archives/924)**
+
