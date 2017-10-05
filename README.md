@@ -37,3 +37,8 @@ select distinct city
 from station
 where regexp_like(city,'^(a|e|i|o|u|A|E|I|O|U)(*)');
 ```
+
+To use REGEXP_LIKE is a correct choice! We can also: 
+```
+regexp_like(lower(city),'^[aeiou](*)')
+```
