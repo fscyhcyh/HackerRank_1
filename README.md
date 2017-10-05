@@ -22,6 +22,8 @@ Sample Output
 ABC 3
 PQRS 4
 
+
+### Weather Observation Station 6- 10 
 ### Weather Observation Station 6
 Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
 
@@ -78,3 +80,13 @@ select distinct city
 from station
 where regexp_like (city, '^[aeiou]','i') and regexp_like(city, '[aeiou]$','i');
 ```
+
+### Weather Observation Station 9
+Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+My answer
+```
+select distinct city
+from station
+where not regexp_like(city,'^[aeiou]','i');
+```
+using "not"
