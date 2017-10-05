@@ -81,7 +81,7 @@ from station
 where regexp_like (city, '^[aeiou]','i') and regexp_like(city, '[aeiou]$','i');
 ```
 
-### Weather Observation Station 9
+### Weather Observation Station 9-10
 Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
 
 My answer
@@ -92,15 +92,6 @@ where not regexp_like(city,'^[aeiou]','i');
 ```
 using "not"
 
-### Weather Observation Station 10
-Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates.
-
-My answer
-```
-select distinct city
-from station
-where not regexp_like(city,'[aeiou]$','i');
-```
 ### Weather Observation Station 11-12
 Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
 
