@@ -55,7 +55,7 @@ regexp_like(city,'^[aeiou]','i')
 in this example the 'i' is the match_parameter 
 [regexp_like example](http://ramkedem.com/en/oracle-regexp_like/)
 
-### Weather Observation Station 7 --- similar to 6
+### Weather Observation Station 7
 Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
 
 My answer:
@@ -83,6 +83,7 @@ where regexp_like (city, '^[aeiou]','i') and regexp_like(city, '[aeiou]$','i');
 
 ### Weather Observation Station 9
 Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+
 My answer
 ```
 select distinct city
@@ -90,3 +91,13 @@ from station
 where not regexp_like(city,'^[aeiou]','i');
 ```
 using "not"
+
+### Weather Observation Station 10
+Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates.
+
+My answer
+```
+select distinct city
+from station
+where not regexp_like(city,'[aeiou]$','i');
+```
