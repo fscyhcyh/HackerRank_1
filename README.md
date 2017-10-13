@@ -131,4 +131,13 @@ order by substr(name,-3,3) , id asc ;
 
 
 ## Aggregation
+### Average Population 
 
+Query the average population for all cities in CITY, rounded down to the nearest integer.
+
+My Answer:
+```
+select floor(avg(population))
+from city
+;
+```
