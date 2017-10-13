@@ -141,9 +141,12 @@ select floor(avg(population))
 from city
 ;
 ```
-**[FLOOR Function](https://www.techonthenet.com/oracle/functions/floor.php)** 
+**[FLOOR Function (round down)](https://www.techonthenet.com/oracle/functions/floor.php)** 
 returns the largest integer value that is equal to or less than a number.
 
+**[Ceil Function (round down)](https://www.techonthenet.com/oracle/functions/ceil.php)** 
+returns the smallest integer value that is greater than or equal to a number
+ 
 **[ROUND Function (with numbers)](https://www.techonthenet.com/oracle/functions/round_nbr.php)**
 returns a number rounded to a certain number of decimal places
 
@@ -151,5 +154,20 @@ returns a number rounded to a certain number of decimal places
 ### Population Density Difference  (Basic Select Weather Observation Station 4 --reference)
 ```
 select max(population) - min(population)
-from city ;
+from city ; 
 ```
+
+
+### The Blunder
+Samantha was tasked with calculating the average monthly salaries for all employees in the EMPLOYEES table, but did not realize her keyboard's 0 key was broken until after completing the calculation. She wants your help finding the difference between her miscalculation (using salaries with any zeroes removed), and the actual average salary.
+
+Write a query calculating the amount of error (i.e.:  average monthly salaries), and round it up to the next integer.
+https://www.hackerrank.com/challenges/the-blunder?h_r=next-challenge&h_v=zen
+
+```
+select ceil(avg(salary) - avg(to_number(replace(to_char(salary),'0'))))
+from employees ;
+```
+
+**[Repalce Function](https://www.techonthenet.com/oracle/functions/replace.php)**
+
