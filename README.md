@@ -215,3 +215,19 @@ from employee
 group by  months *salary ) 
 where row_num =1  ;
 ```
+
+### Weather Observation Station 17
+
+Query the Western Longitude (LONG_W) for the smallest Northern Latitude (LAT_N) in STATION that is greater than 38.778 . Round your answer to 4 decimal places.
+
+```
+select round(long_w,4)
+from station
+where lat_n = (select min(lat_n) from station where lat_n > 38.778) ;
+```
+or
+```
+select distinct round (first_value(long_w) over (order by lat_n),4)
+from station
+where lat_n > 38.778;
+```
