@@ -146,3 +146,10 @@ returns the largest integer value that is equal to or less than a number.
 
 **[ROUND Function (with numbers)](https://www.techonthenet.com/oracle/functions/round_nbr.php)**
 returns a number rounded to a certain number of decimal places
+
+
+### Population Density Difference  (Basic Select Weather Observation Station 4 --reference)
+```
+select max(population) - min(population)
+from city ;
+```
