@@ -12,7 +12,7 @@ from station ;
 ```
 
 ### Weather Observation Station 5
-**This is the points that i don't know: row number**
+**This is the points that i didn't know: analytic functions**
 
 Query the two cities in STATION with the shortest and longest CITY names, as well as their respective lengths (i.e.: number of characters in the name). If there is more than one smallest or largest city, choose the one that comes first when ordered alphabetically.
 Sample Input
@@ -21,6 +21,19 @@ Let's say that CITY only has four entries: DEF, ABC, PQRS and WXY
 Sample Output
 ABC 3
 PQRS 4
+
+```
+select first_value(city) over (order by len, city), first_value(len) over (order by len, city)
+from 
+(select city, length(city) len
+from station )   
+union 
+select first_value(city) over (order by len desc, city), first_value(len) over (order by len desc, city)
+from 
+(select city, length(city) len
+from station )  
+;
+```
 
 
 ### Weather Observation Station 6- 12 
