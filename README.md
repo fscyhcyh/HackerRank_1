@@ -141,3 +141,8 @@ select floor(avg(population))
 from city
 ;
 ```
+**[FLOOR Function](https://www.techonthenet.com/oracle/functions/floor.php)** 
+returns the largest integer value that is equal to or less than a number.
+
+**[ROUND Function (with numbers)](https://www.techonthenet.com/oracle/functions/round_nbr.php)**
+returns a number rounded to a certain number of decimal places
