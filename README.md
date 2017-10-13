@@ -128,3 +128,7 @@ order by substr(name,-3,3) , id asc ;
 ```
 **Pay attention to order by and [The sequence of the sql clause](http://www.jellythink.com/archives/924)**
 
+
+
+##Aggregation
+
