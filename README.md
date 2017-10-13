@@ -191,3 +191,27 @@ from
 from employee 
 group by  months *salary ) ;
 ```
+
+Or
+
+```
+select total_earning, num
+from
+(
+select months *salary as total_earning, count(months *salary) num, rank() over (order by  months *salary desc) as ranking
+from employee 
+group by  months *salary ) 
+where ranking =1  ;
+```
+
+or
+
+```
+select total_earning, num
+from
+(
+select months *salary as total_earning, count(months *salary) num, row_number() over (order by months *salary desc) as row_num
+from employee 
+group by  months *salary ) 
+where row_num =1  ;
+```
