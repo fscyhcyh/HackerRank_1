@@ -231,3 +231,14 @@ select distinct round (first_value(long_w) over (order by lat_n),4)
 from station
 where lat_n > 38.778;
 ```
+
+
+### Weather Observation Station 19
+Query the Euclidean Distance between points 
+
+```
+select round(sqrt(power(max(long_w)-min(long_w),2) + power(max(lat_n) - min(lat_n),2)),4)
+from station;
+```
+**[POWER Function](https://www.techonthenet.com/oracle/functions/power.php)**
+**[SQRT Function](https://www.techonthenet.com/oracle/functions/sqrt.php)**
