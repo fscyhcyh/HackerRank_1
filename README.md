@@ -177,3 +177,17 @@ from employees ;
 
 **[Oracle Regular Expression Support](https://docs.oracle.com/cd/B19306_01/server.102/b14200/ap_posix.htm)**
 **[Regular Expression](https://oracle-base.com/articles/misc/regular-expressions-support-in-oracle#example8)**
+
+
+### Top Earners 
+We define an employee's total earnings to be their monthly  worked, and the maximum total earnings to be the maximum total earnings for any employee in the Employee table. Write a query to find the maximum total earnings for all employees as well as the total number of employees who have maximum total earnings. Then print these values as 2 space-separated integers.
+
+My Answer:
+```
+select distinct first_value(total_earning) over (order by num desc),
+       first_value(num) over ( order by num desc)
+from
+(select months *salary as total_earning, count(months *salary) num
+from employee 
+group by  months *salary ) ;
+```
