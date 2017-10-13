@@ -175,5 +175,5 @@ from employees ;
 **[REGEXP_REPLACE Function 1](https://docs.oracle.com/cd/B19306_01/server.102/b14200/functions130.htm)**
 **[REGEXP_REPLACE Function 2](https://www.techonthenet.com/oracle/functions/regexp_replace.php)**
 
-**[Multilingual Regular Expression Syntax](https://docs.oracle.com/cd/B19306_01/server.102/b14200/ap_posix001.htm#i690819)**
+**[Oracle Regular Expression Support](https://docs.oracle.com/cd/B19306_01/server.102/b14200/ap_posix.htm)**
 **[Regular Expression](https://oracle-base.com/articles/misc/regular-expressions-support-in-oracle#example8)**
