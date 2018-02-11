@@ -35,6 +35,23 @@ from station )
 ;
 ```
 
+```
+
+select city, len
+from
+(select city, length(city) len
+from station  
+order by len desc, city)
+where rownum =1 
+union 
+select city, len
+from
+(select city, length(city) len
+from station  
+order by len , city)
+where rownum =1  ;
+```
+
 
 ### Weather Observation Station 6- 12 
 ### Weather Observation Station 6
